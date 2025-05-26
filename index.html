@@ -1,0 +1,310 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MCC CRICKET</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      perspective: 1000px;
+    }
+    header {
+      background: #111;
+      color: #00e676;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    }
+    main {
+      padding: 1rem;
+      transform: rotateX(2deg);
+    }
+    h2 {
+      color: #ffeb3b;
+      text-shadow: 1px 1px 3px #000;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 1.5rem;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    th, td {
+      padding: 0.7rem;
+      text-align: center;
+      border-bottom: 1px solid #444;
+    }
+    th {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    .section {
+      margin-bottom: 2rem;
+    }
+    .live-box {
+      border: 2px solid #00e5ff;
+      padding: 1rem;
+      margin-bottom: 2rem;
+      background: rgba(0,0,0,0.6);
+      border-radius: 12px;
+      text-align: center;
+      animation: glow 89s infinite alternate;
+    }
+    @keyframes glow {
+      from { box-shadow: 0 0 10px #00e5ff; }
+      to { box-shadow: 0 0 20px #00e5ff, 0 0 30px #00e5ff; }
+    }
+    .live-score {
+      display: flex;
+      justify-content: center;
+      gap: 0.1rem;
+      margin-top: 0.1rem;
+    }
+    .live-score div {
+      background: #004d40;
+      padding: 0.7rem 1.2rem;
+      border-radius: 10px;
+      font-weight: bold;
+      color: #fff;
+      transition: transform 0.3s;
+    }
+    .live-score div:hover {
+      transform: scale(1.2) rotateY(10deg);
+    }
+    .highlighted {
+      background-color: #d50000;
+    }
+    ul li {
+      margin-bottom: 0.5rem;
+    }
+    p, li, td, th {
+      font-size: 1rem;
+    }
+       .commentary {
+      margin-top: 40px;
+      padding: 20px;
+      background-color: #111;
+      border-radius: 15px;
+      box-shadow: 0 0 20px red, 0 0 20px green, 0 0 20px blue, 0 0 20px yellow, 0 0 20px orange;
+      animation: rgbCycle 5s infinite;
+    }
+    
+    .laser-light {
+      border: 2px solid transparent;
+      border-radius: 10px;
+      animation: laserGlow 1.5s infinite alternate;
+    }
+
+    @keyframes laserGlow {
+      0% { box-shadow: 0 0 5px red; }
+      25% { box-shadow: 0 0 10px green; }
+      50% { box-shadow: 0 0 15px blue; }
+      75% { box-shadow: 0 0 10px yellow; }
+      100% { box-shadow: 0 0 5px orange; }
+    }
+
+    
+  </style>
+</head>
+<body>
+  <header>
+    <h1>MCC T20C CRICKET</h1>
+  </header>
+  <main>
+    <div class="live-box">
+      <p><strong>TWERK VS RADIOR </strong><br>T20 37 of 49 <div class="highlighted">Yesterday Lion fit won by 48 runs</div></p>
+      <table>
+        <tr>
+          <td><strong>BATTING</strong></td>
+          <td><strong> Bowling</strong></td>
+        </tr>
+        <tr>
+          <td>
+            <span style="color: #4dd0e1;">&bull;</span> TBD: 0*(00)<br>
+            TBD: 0* (00)
+          </td>
+          <td>
+            <strong>TBD:</strong> 0/00 (0)
+          </td>
+        </tr>
+      </table>
+      <div class="live-score">
+        <div>0</div>
+        <div>0</div>
+        <div>0</div>
+        <div>0</div>
+        <div>0</div>
+        <div>0</div>
+        <div><strong>0.0</strong></div>
+      </div>
+    </div><section class="section">
+        
+        <div class="commentary">
+      <h2>Live Commentary Panel</h2>
+      <p></p>
+      <p></p>
+      <p></p>
+    </div>
+    
+   
+   
+    <div class="section laser-light">
+    <h2>Scorecard</h2>
+    <table>
+      <tr><th>Player</th><th>Runs</th><th>Balls</th><th>4s</th><th>6s</th><th>S/R</th></tr>
+      <tr><td>TBD</td><td>0</td><td>0</td><td>0</td><td>0</td><td>135.0</td></tr>
+      <tr><td>TBD</td><td>0</td><td>0</td><td>0</td><td>0</td><td>114.29</td></tr>
+      <tr><td>TBD</td><td>0</td><td>0</td><td>0</td><td>0</td><td>136.0</td></tr>
+      <tr><td>TBD</td><td>0</td><td>0</td><td>0</td><td>0</td><td>25.0</td></tr>
+      <tr><td>TBD</td><td>0</td><td>0</td><td>0</td><td>10</td><td>212.5</td></tr>
+      <tr><td>TBD</td><td>0</td><td>0</td><td>0</td><td>0</td><td>66.67</td></tr>
+    </table>
+  </div>
+  
+  <section class="boundary-stats">
+  <h2 class="boundary-title">Match Boundaries</h2>
+  <div class="boundary-box">
+    <div class="stat-block">
+      <h3>Total Sixes</h3>
+      <p id="sixCount">1155</p>
+    </div>
+    <div class="stat-block">
+      <h3>Total Fours</h3>
+      <p id="fourCount">816</p>
+    </div>
+  </div>
+</section>
+  
+
+  <div class="section laser-light">
+    <h2>Bowling</h2>
+    <table>
+      <tr><th>Bowler</th><th>O</th><th>M</th><th>R</th><th>W</th><th>Econ</th></tr>
+      <tr><td>TBD</td><td>0</td><td>0</td><td>0</td><td>0</td><td>8.5</td></tr>
+      <tr><td>TBD</td><td>0</td><td>0</td><td>0</td><td>0</td><td>12.0</td></tr>
+      <tr><td>TBD</td><td>0</td><td>0</td><td>0</td><td>0</td><td>8.33</td></tr>
+      <tr><td>TBD</td><td>0</td><td>0</td><td>0</td><td>0</td><td>8.29</td></tr>
+      <tr><td>TBD</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.0</td></tr>
+    </table>
+  </div>
+  
+  
+    
+  <h2>Matches Points Table</h2>
+  <table>
+    <tr><th>Team</th><th>Played</th><th>Won</th><th>Lost</th><th>Points</th><th>NRR</th></tr>
+    <tr><td>Leo(Q)</td><td>07</td><td>7</td><td>0</td><td>14</td><td>+1.52</td></tr>
+    <tr><td>DCC CHARGES(Q)</td><td>07</td><td>6</td><td>1</td><td>12</td><td>+1.67</td></tr>
+    <tr><td>LION FIT</td><td>07</td><td>4</td><td>3</td><td>8</td><td>+1.88</td></tr>
+    <tr><td>UAE</td><td>07</td><td>4</td><td>3</td><td>8</td><td>+0.54</td></tr>
+    <tr><td>RADIOR</td><td>07</td><td>3</td><td>4</td><td>6</td><td>+0.88</td></tr>
+    <tr><td>TWERK</td><td>07</td><td>3</td><td>4</td><td>6</td><td>-0.54</td></tr>
+    <tr><td>HERO 11</td><td>07</td><td>3</td><td>4</td><td>6</td><td>-1.23</td></tr>
+    <tr><td>SUNRISE KINGS(E)</td><td>07</td><td>2</td><td>5</td><td>4</td><td>-0.00</td></tr>
+    <tr><td>NEO(E)</td><td>08</td><td>2</td><td>6</td><td>4</td><td>-2.69</td></tr>
+    <tr><td>SFX STAR(E)</td><td>08</td><td>2</td><td>6</td><td>4</td><td>-2.70</td></tr>
+  </table>
+</section>
+
+<section class="section">
+  <h2>Most Runs (Top 5 Players)</h2>
+  <table>
+    <tr><th>Player</th><th>Runs</th><th>Matches</th></tr>
+    <tr><td>PRAGADEESH</td><td>718</td><td>7</td></tr>
+    <tr><td>SANJAY</td><td>714</td><td>7</td></tr>
+    <tr><td>RAHUL</td><td>629</td><td>7</td></tr>
+    <tr><td>JOSHUA</td><td>502</td><td>7</td></tr>
+    <tr><td>JEFFERY</td><td>431</td><td>7</td></tr>
+  </table>
+</section>
+
+<section class="section">
+  <h2>Most Wickets (Top 5 Players)</h2>
+  <table>
+    <tr><th>Player</th><th>Wickets</th><th>Matches</th></tr>
+    <tr><td>PRAGADEESH</td><td>30</td><td>7</td></tr>
+    <tr><td>SANJAY</td><td>16</td><td>7</td></tr>
+    <tr><td>ADITHYA</td><td>11</td><td>8</td></tr>
+    <tr><td>CHERAN</td><td>10</td><td>7</td></tr>
+    <tr><td>DEEPESH</td><td>9</td><td></td></tr>
+  </table>
+</section>
+
+<section class="section">
+  <h2>PERFOMACE</h2>
+  <ul>
+    <li><strong>Best Team:</strong> TBD</li>
+    <li><strong>Worst Team:</strong> TBD</li>
+    <li><strong>Average Team:</strong> TBD</li>
+    <li><strong>Best Captain:</strong> Captain of TBD</li>
+    <li><strong>Win Probability:</strong> LEO (80%)
+        DCC (70%)</li>
+  </ul>
+</section>
+
+<section class="section">
+  <h2>Upcoming Matches Schedule</h2>
+  <table>
+    <tr><th>Match</th><th>Date</th><th>Time</th></tr>
+    <tr><td>TWERK  vs RADIOR</td><td>May 27, 2025</td><td>01:30 PM</td></tr>
+    <tr><td>LEO vs SFX STAR</td><td>May 28, 2025</td><td>01:30 PM</td></tr>
+    <tr><td> HERO 11 vs UAE </td><td>May 29, 2025</td><td>01:30 PM</td></tr>
+  </table>
+</section>
+
+<section class="fans-qa">
+  <h2 class="qa-title">Fans Zone – Q&A</h2>
+
+  <table class="laser-table">
+    <thead>
+      <tr>
+        <th>Fan</th>
+        <th>Question</th>
+        <th>Answer</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Prasanth</td>
+        <td>Who is the best batsman this season?</td>
+        <td>PRAGADEESH with best run scorer for this season</td>
+      </tr>
+      <tr>
+        <td>Sandhiya</td>
+        <td>Which team has the strongest bowling lineup?</td>
+        <td>Leo , having the strongest bowling line up</td>
+      </tr>
+      <tr>
+        <td>Aarav</td>
+        <td>Can LION FIT  still qualify for the playoffs?</td>
+        <td>Yes, by winning 1 of the next 2 matches.</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="section">
+  <h2>Predicted Winner</h2>
+  <p>Based on current performance and statistics, <strong>LEO </strong> is predicted to win the tournament.</p>
+   <div class="knockout">
+      <h2>Knockout Stage</h2>
+      <div class="stage">Semi Final 1: Team 1 vs Team 3</div>
+      <div class="stage">Semi Final 2: Team 2 vs Team 4</div>
+      <div class="stage">Final: Winner SF1 vs Winner SF2</div>
+ <div class="commentary">
+      <h2>TEN TEAMS ONE DREAM 2025 </h2>
+      <p>MCC CRICKET T20C CHAMPIONS TROPHY 2025</p>
+    </div>
+ 
+    </div>
+  </div>
+</section>
+
+  </main>
+</body>
+</html>

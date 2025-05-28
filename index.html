@@ -672,6 +672,94 @@
       <h2>TEN TEAMS ONE DREAM 2025 </h2>
       <p>MCC CRICKET T20C CHAMPIONS TROPHY 2025</p>
     </div>
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Win Probability Chart</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f8f9fa;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2 style="text-align:center;">Win Probability</h2>
+  <canvas id="winProbabilityChart" height="300"></canvas>
+
+  <script>
+    const ctx = document.getElementById('winProbabilityChart').getContext('2d');
+
+    const winProbabilityChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: [
+          "0", "2", "4", "6", "8", "10", "12", "14", "16", "18", "20"
+        ],
+        datasets: [
+          {
+            label: "SFX",
+            data: [50,],
+            fill: true,
+            backgroundColor: "rgba(30, 144, 255, 0.3)",
+            borderColor: "#1e90ff",
+            tension: 0.4,
+            pointRadius: 0
+          },
+          {
+            label: "LEO",
+            data: [50, , , , , , , , , ],
+            fill: true,
+            backgroundColor: "rgba(220, 20, 60, 0.3)",
+            borderColor: "#dc143c",
+            tension: 0.4,
+            pointRadius: 0
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          tooltip: {
+            mode: 'index',
+            intersect: false,
+          },
+          legend: {
+            display: true,
+            labels: {
+              usePointStyle: true
+            }
+          }
+        },
+        interaction: {
+          mode: 'index',
+          intersect: false,
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            max: 100,
+            title: {
+              display: true,
+              text: 'Win Probability (%)'
+            }
+          },
+          x: {
+            title: {
+              display: true,
+              text: 'Overs'
+            }
+          }
+        }
+      }
+    });
+  </script>
+
  
     </div>
   </div>

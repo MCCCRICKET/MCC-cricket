@@ -491,6 +491,28 @@
       <div class="team">SFX</div>
     </div>
 <div class="score">138-1 (9.2)</div>
+<div id="calc-score">
+  <p><strong>Target:</strong> 135</p>
+  <p><strong>Current:</strong> 138/1 in 9.2 overs</p>
+  <p id="required-info"></p>
+</div>
+
+<script>
+  const target = 135;
+  const current = 135;
+  const overs = 9;
+  const balls = 2;
+
+  const ballsBowled = overs * 6 + balls;
+  const totalBalls = 120;
+
+  const remainingRuns = target - current;
+  const remainingBalls = totalBalls - ballsBowled;
+
+  document.getElementById('required-info').innerText =
+    `Required: ${remainingRuns} runs from ${remainingBalls} balls`;
+</script>
+
 
           <td><strong>Leo(BAT)</strong></td>
           <td><strong>Sfx(BOWLING)</strong></td>

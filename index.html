@@ -722,7 +722,145 @@
   .Eliminated {
     background-color: #dc3545; /* Red */
   }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Styled Scoreboard Panel</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #0d0f1a;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
+    }
 
+    .main-container {
+      max-width: 360px;
+      margin: 20px auto;
+      background: #0d0f1a;
+      border: 2px solid #00f0ff;
+      border-radius: 16px;
+      padding: 12px;
+      box-shadow: 0 0 10px #00f0ff;
+    }
+
+    .header {
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: 8px;
+      font-size: 14px;
+      color: #00f0ff;
+    }
+
+    .overlay-bar {
+      display: flex;
+      flex-direction: column;
+      background: #1a1c29;
+      border-radius: 12px;
+      padding: 10px;
+      font-size: 12px;
+      color: white;
+    }
+
+    .top-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .flag {
+      width: 24px;
+      margin-right: 6px;
+    }
+
+    .batsmen {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .center-box {
+      background: #63147b;
+      color: #fff;
+      border-radius: 12px;
+      padding: 6px;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+
+    .center-top {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+    }
+
+    .score-box {
+      background: #ec1d6f;
+      padding: 2px 8px;
+      border-radius: 10px;
+    }
+
+    .overs-box {
+      background: #ffdf33;
+      padding: 2px 6px;
+      border-radius: 10px;
+      color: #000;
+      font-weight: bold;
+    }
+
+    .toss-info {
+      font-size: 10px;
+      margin-top: 3px;
+    }
+
+    .bottom-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .balls {
+      display: flex;
+      gap: 4px;
+      margin-top: 8px;
+      justify-content: center;
+    }
+
+    .ball {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: 1px solid #ccc;
+    }
+
+    .run { background-color: #00ff00; }
+    .dot { background-color: #00aaff; }
+
+    .footer {
+      text-align: center;
+      font-size: 10px;
+      color: #aaa;
+      margin-top: 12px;
+    }
+
+    .rate-box {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 11px;
+      color: #aa;
+      line-height: 1.6;
+    }
+
+    .highlight {
+      color: black;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
 </style>
   </style>
 </head>
@@ -747,60 +885,102 @@
   <p>🌧️ Rain Chance: <strong>27%</strong></p>
 </div>
       <table>
-        <tr>  <div class="scorecard-container">
-    <div class="header">
-      <div class="team">LION FIT</div>
-      <div class="live"> LIVE </div>
-      <div class="team">NEO</div>
+        <tr>   <div class="main-container">
+    <div class="overlay-bar">
+      <div class="header">LIVE • LION FIT vs NEO</div>
+
+      <div class="top-section">
+        <div style="display: flex; align-items: center;">
+    
+          <div class="batsmen" id="batters">
+            <!-- Filled by JS -->
+          </div>
+        </div>
+
+        <div style="display: flex; align-items: center;">
+          <div class="bowler-details" style="text-align: right; margin-right: 6px;">
+            <div class="bowler-name">TBD</div>
+            <div style="font-size: 11px;">0-0 (0.0)</div>
+          </div>
+         
+        </div>
+      </div>
+
+      <div class="center-box">
+        <div class="center-top">
+          <span>LION  v NEO</span>
+          <span class="score-box" id="scoreBox">--</span>
+          <span class="overs-box" id="oversBox">--</span>
+        </div>
+        <div class="toss-info">TBD won the toss & elected to TBD</div>
+      </div>
+
+      <div class="rate-box">
+        CRR: <span class="highlight" id="crr">--</span><br>
+        Projected: <span class="highlight" id="proj">--</span><br>
+        RRR: <span class="highlight" id="rrr">--</span> (Target 000)
+      </div>
+
+      <div class="balls">
+        <div class="ball run"></div>
+        <div class="ball run"></div>
+        <div class="ball run"></div>
+        <div class="ball dot"></div>
+        <div class="ball dot"></div>
+        <div class="ball dot"></div>
+      </div>
     </div>
-<div class="score">0-0 (0.0)</div>
-<div id="calc-score">
-  <p><strong>Target:</strong> 0</p>
-  <p><strong>Current:</strong> 0/0 in 0.0 overs</p>
-  <p id="required-info"></p>
-</div>
 
-<script>
-  const target = ;
-  const current =;
-  const overs =;
-  const balls = ;
-
-  const ballsBowled = overs * 6 + balls;
-  const totalBalls = 120;
-
-  const remainingRuns = target - current;
-  const remainingBalls = totalBalls - ballsBowled;
-
-  document.getElementById('required-info').innerText =
-    `Required: ${remainingRuns} runs from ${remainingBalls} balls`;
-</script>
-
-
-          <td><strong>TBD (BATTING)</strong></td>
-          <td><strong>TBD(BOWLING)</strong></td>
-        </tr>
-        <tr>
-          <td>
-            <span style="color: #4dd0e1;">&bull;</span>TBD:0(0)*
-<br>
-           TBD: 0(0)
-          </td>
-          <td>
-            <strong>TBD:</strong> 0-0(0.0)
-          </td>
-        </tr>
-      </table>    <div class="section-title">This Over</div>
-    <div class="balls">
-      <div class="ball ball-4"></div>
-      <div class="ball ball-4"></div>
-      <div class="ball ball-4"></div>
-      <div class="ball ball-2"></div>
-      <div class="ball ball-1"></div>
-      <div class="ball ball-1"></div>
-      <div class="ball ball-w"></div>
-    </div>
+    <div class="footer">MCC T20CT • Match 40 of 48</div>
   </div>
+
+  <script>
+    // Editable match data
+    const runs = 0;
+    const wickets = 0;
+    const overs = 0; // Change this to simulate different overs
+    const target = 0;
+    const totalOvers = 20;
+
+    const striker = 'TBD';
+    const nonStriker = 'TBD';
+    const strikerRuns = 0;
+    const strikerBalls = 0;
+    const nonStrikerRuns = 0;
+    const nonStrikerBalls = 0;
+
+    function getTotalBalls(overs) {
+      return Math.floor(overs) * 6 + Math.round((overs % 1) * 10);
+    }
+
+    function calculateCRR(runs, overs) {
+      const balls = getTotalBalls(overs);
+      return balls > 0 ? (runs / (balls / 6)).toFixed(2) : "0.00";
+    }
+
+    function calculateRRR(target, runs, overs, totalOvers) {
+      const ballsUsed = getTotalBalls(overs);
+      const ballsLeft = totalOvers * 6 - ballsUsed;
+      const runsNeeded = target - runs;
+      return ballsLeft > 0 ? (runsNeeded / (ballsLeft / 6)).toFixed(2) : "0.00";
+    }
+
+    function calculateProjected(runs, overs, totalOvers) {
+      const crr = parseFloat(calculateCRR(runs, overs));
+      return (crr * totalOvers).toFixed(0);
+    }
+
+    // Update DOM
+    document.getElementById('scoreBox').textContent = `${runs} - ${wickets}`;
+    document.getElementById('oversBox').textContent = `${overs.toFixed(1)} Overs`;
+    document.getElementById('crr').textContent = calculateCRR(runs, overs);
+    document.getElementById('rrr').textContent = calculateRRR(target, runs, overs, totalOvers);
+    document.getElementById('proj').textContent = calculateProjected(runs, overs, totalOvers);
+    document.getElementById('batters').innerHTML = `
+      ${striker}* ${strikerRuns} (${strikerBalls})<br>
+      ${nonStriker} ${nonStrikerRuns} (${nonStrikerBalls})
+    `;
+  </script>
     </div><section class="section">
         
         <div class="commentary">

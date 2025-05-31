@@ -85,15 +85,9 @@
     p, li, td, th {
       font-size: 1rem;
     }
-       .commentary {
-      margin-top: 40px;
-      padding: 20px;
-      background-color: #111;
-      border-radius: 15px;
-      box-shadow: 0 0 20px red, 0 0 20px green, 0 0 20px blue, 0 0 20px yellow, 0 0 20px orange;
-      animation: rgbCycle 5s infinite;
+       
     }
-    
+
     .laser-light {
       border: 2px solid transparent;
       border-radius: 10px;
@@ -492,8 +486,8 @@
   </style>
 </head>
 <body>
-    
-  
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -587,6 +581,100 @@
       font-size: 0.9em;
       opacity: 0.7;
     }
+        {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: #001d3d;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .match-container {
+      display: flex;
+      background: #002855;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 0 25px rgba(0,0,0,0.5);
+      max-width: 500px;
+      width: 96%;
+      margin: 2px;
+    }
+
+    .team-card {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      background-color: #003f88;
+    }
+
+
+
+    .team-list {
+      padding: 20px;
+      background-color: #002855;
+    }
+
+    .team-title {
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      color: #ffffff;
+    }
+
+    .match-title {
+      font-size: 16px;
+      color: #ffb300;
+      margin-bottom: 15px;
+    }
+
+    .player {
+      font-size: 16px;
+      padding: 4px 0;
+    }
+
+    .role {
+      color: #ff3c3c;
+      font-weight: bold;
+    }
+
+    .vc-role {
+      color: #00bfff;
+      font-weight: bold;
+    }
+
+    .wk-role {
+      color: #ffa500;
+      font-weight: bold;
+    }
+
+    .vs-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 20px;
+      font-size: 30px;
+      font-weight: bold;
+      background-color: #001d3d;
+      color: #ffffff;
+    }
+
+    @media (max-width: 900px) {
+      .match-container {
+        flex-direction: column;
+      }
+
+      .vs-divider {
+        padding: 10px;
+        font-size: 24px;
+      }
+
+      .
+    }
+    
   </style>
 </head>
 <body>
@@ -595,7 +683,7 @@
   </style>
 </head>
 <body>
- 
+
   <<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -656,44 +744,8 @@
       font-size: 14px;
     }
 
-    .commentary-block {
-      margin-top: 15px;
-      border-top: 1px solid #eee;
-      padding-top: 10px;
-    }
 
-    .ball-comment {
-      display: flex;
-      align-items: flex-start;
-      margin-bottom: 10px;
-    }
 
-    .ball-label {
-      background-color: #f0f0f0;
-      color: #333;
-      border-radius: 5px;
-      padding: 5px 10px;
-      font-weight: bold;
-      margin-right: 10px;
-      min-width: 40px;
-      text-align: center;
-    }
-
-    .ball-label.lb {
-      background-color:;
-    }
-
-    .ball-text {
-      flex: 1;
-    }
-
-    .summary {
-      font-size: 13px;
-      color: #555;
-      margin-top: 10px;
-      font-style: italic;
-    }
-    
 <style>
   .team-status {
     display: flex;
@@ -871,9 +923,87 @@
       border-radius: 20%;
       border: 7px 
     }
+ 
+      background-color: #ffffff;
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      justify-content: center;
+      padding: 40px;
+    }
+
+    .commentary-panel {
+      background: #63147b;
+      color
+      border-radius: 30px;
+      box-shadow: 0 0 15px rgba(99, 20, 123, 0.8);
+      padding: 25px 30px;
+      max-width: 650px;
+      width: 100%;
+    }
+
+    .commentary-title {
+      font-weight: bold;
+      font-size: 22px;
+      text-align: center;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #ffdf33;
+      padding-bottom: 6px;
+    }
+
+    .ball-line {
+      margin: 10px 0;
+      display: flex;
+      align-items: center;
+    }
+
+    .ball-number {
+      background-color: #ffdf33;
+      color: black;
+      border-radius: 12px;
+      padding: 3px 10px;
+      font-weight: bold;
+      margin-right: 10px;
+      min-width: 50px;
+      text-align: center;
+    }
+
+    .ball-text {
+      color: white;
+      flex: 1;
+    }
+
+    .highlight-six {
+      color: #00ff99;
+      font-weight: bold;
+    }
+
+    .highlight-four {
+      color: #33ccff;
+      font-weight: bold;
+    }
+
+    .highlight-wicket {
+      color: #ff4c4c;
+      font-weight: bold;
+    }
+
+    .fall-of-wicket, .total-runs {
+      margin-top: 20px;
+      border-top: 1px dashed #ffdf33;
+      padding-top: 10px;
+      font-size: 15px;
+      font-style: italic;
+      color: #ffdf33;
+    }
+    
+
   </style>
 </head>
 <body>
+
+
+ 
+
 </style>
   </style>
 </head>
@@ -882,7 +1012,7 @@
     <h1>MCC T20C CRICKET</h1>
   </header>
   <main>
-    
+
     <div class="live-box">
       <div class="live-status">
   <div class="blink-live">•LIVE ENDED </div>
@@ -904,7 +1034,7 @@
 
       <div class="top-section">
         <div style="display: flex; align-items: center;">
-    
+
           <div class="batsmen" id="batters">
             <!-- Filled by JS -->
           </div>
@@ -913,697 +1043,4 @@
         <div style="display: flex; align-items: center;">
           <div class="bowler-details" style="text-align: right; margin-right: 6px;">
             <div class="bowler-name">Diva</div>
-            <div style="font-size: 11px;">0-18 (0.5)</div>
-          </div>
-         
-        </div>
-      </div>
-
-      <div class="center-box">
-        <div class="center-top">
-          <span>LION  v NEO</span>
-          <span class="score-box" id="scoreBox">--</span>
-          <span class="overs-box" id="oversBox">--</span>
-        </div>
-        <div class="toss-info">LION FIT  won the toss & elected to FIELD</div>
-      </div>
-   <div class="highlight">
-      <div class="wicket">S I X... S I X.. S I X </div></div></div>
-    </div>
-
-      <div class="rate-box">
-        CRR: <span class="highlight" id="crr">--</span><br>
-        Projected: <span class="highlight" id="proj">--</span><br>
-        RRR: <span class="highlight" id="rrr">--</span> (Target 61)
-      </div>
-
-      <div class="balls">
-        <div class="ball run"></div>
-        <div class="ball run">6</div>
-        <div class="ball run">1</div>
-        <div class="ball dot">4</div>
-        <div class="ball dot">6</div>
-        <div class="ball dot">1</div>
-      </div>
-    </div>
-
-    <div class="footer">MCC T20CT • Match 40 of 48</div>
-  </div>
-
-  <script>
-    // Editable match data
-    const runs = 64;
-    const wickets = 0;
-    const overs = 2.5; // Change this to simulate different overs
-    const target = 61;
-    const totalOvers = 20;
-
-    const striker = 'Sanjay';
-    const nonStriker = 'Aavesh';
-    const strikerRuns = 54;
-    const strikerBalls = 9;
-    const nonStrikerRuns = 14;
-    const nonStrikerBalls = 09;
-
-    function getTotalBalls(overs) {
-      return Math.floor(overs) * 6 + Math.round((overs % 1) * 10);
-    }
-
-    function calculateCRR(runs, overs) {
-      const balls = getTotalBalls(overs);
-      return balls > 0 ? (runs / (balls / 6)).toFixed(2) : "0.00";
-    }
-
-    function calculateRRR(target, runs, overs, totalOvers) {
-      const ballsUsed = getTotalBalls(overs);
-      const ballsLeft = totalOvers * 6 - ballsUsed;
-      const runsNeeded = target - runs;
-      return ballsLeft > 0 ? (runsNeeded / (ballsLeft / 6)).toFixed(2) : "0.00";
-    }
-
-    function calculateProjected(runs, overs, totalOvers) {
-      const crr = parseFloat(calculateCRR(runs, overs));
-      return (crr * totalOvers).toFixed(0);
-    }
-
-    // Update DOM
-    document.getElementById('scoreBox').textContent = `${runs} - ${wickets}`;
-    document.getElementById('oversBox').textContent = `${overs.toFixed(1)} Overs`;
-    document.getElementById('crr').textContent = calculateCRR(runs, overs);
-    document.getElementById('rrr').textContent = calculateRRR(target, runs, overs, totalOvers);
-    document.getElementById('proj').textContent = calculateProjected(runs, overs, totalOvers);
-    document.getElementById('batters').innerHTML = `
-      ${striker}* ${strikerRuns} (${strikerBalls})<br>
-      ${nonStriker} ${nonStrikerRuns} (${nonStrikerBalls})
-    `;
-  </script>
-    </div><section class="section">
-        
-        <div class="commentary">
-      <h2>Live Commentary Panel</h2>
-
-    <div class="section-title">Last Over Summary</div>
-    <div class="summary">End of over 0.0 -0  Runs ·  </div>
-
-    <div class="section-title">Commentary</div>
-<p>this section currently under surveillance so we of this site it only open at Knockout stages </p>
-
-    <div class="commentary-block">
-      <div class="ball-comment">
-        <div class="ball-label">0.6</div>
-        <div class="ball-text"> </div>
-      </div>
-      <div class="ball-comment">
-        <div class="ball-label">0.5</div>
-        <div class="ball-text"></div>
-      </div>
-      <div class="ball-comment">
-        <div class="ball-label">0.4</div>
-        <div class="ball-text"> </div>
-      </div>
-      <div class="ball-comment">
-        <div class="ball-label ">0.3</div>
-        <div class="ball-text"> </div>
-      </div>
-      <div class="ball-comment">
-        <div class="ball-label">0.2</div>
-        <div class="ball-text"></div>
-      </div>
-      <div class="ball-comment">
-        <div class="ball-label">0.1</div>
-        <div class="ball-text"> </div>
-      </div>
-    </div>
-  </div>
-    </div>
-    
-   
-   
-    <div class="section laser-light">
-    <h2>Scorecard</h2>
-    <table>
-      <tr><th>Player</th><th>Runs</th><th>Balls</th><th>4s</th><th>6s</th><th>S/R</th></tr>
-      <tr><td>TBD</td><td>0</td><td>0</td><td>0</td><td>4</td><td>0.0</td></tr>
-      <tr><td>TBD</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.0</td></tr>
-      <tr><td>TBD</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.0</td></tr>
-      <tr><td>TBD</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.0</td></tr>
-      <tr><td>TBD</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.0</td></tr>
-      <tr><td>TBD</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.0</td></tr>
-    </table>
-  </div>
-  
-  <section class="boundary-stats">
-  <h2 class="boundary-title">Match Boundaries</h2>
-  <div class="boundary-box">
-    <div class="stat-block">
-      <h3>Total Sixes</h3>
-      <p id="sixCount">1213</p>
-    </div>
-    <div class="stat-block">
-      <h3>Total Fours</h3>
-      <p id="fourCount">848</p>
-    </div>
-  </div>
-</section>
-  
-
-  <div class="section laser-light">
-    <h2>Bowling</h2>
-    <table>
-      <tr><th>Bowler</th><th>O</th><th>M</th><th>R</th><th>W</th><th>Econ</th></tr>
-      <tr><td>TBD</td><td>0.0</td><td>0</td><td>0</td><td>0</td><td>.0</td></tr>
-      <tr><td>TBD</td><td>0.0</td><td>0</td><td>0</td><td>0</td><td>.0</td></tr>
-      <tr><td>TBD</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.0</td></tr>
-      <tr><td>TBD</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.0</td></tr>
-      <tr><td>TBD</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.0</td></tr>
-    </table>
-  </div>
-<div class="container">
-    <h1>🏏 Post-Match Presentation  Match No 40off48</h1>
-    <p><strong>Venue:</strong> Marina stadium<br>
-       <strong>Date:</strong> 29 May 2025<br>
-       <strong>Format:</strong> T20 Championship </p>
-
-    <div class="section">
-      <h2>🧾 Match Summary</h2>
-      <div class="card">
-        <p><strong>NEO:</strong> 61/10 (6.3 overs)<br>
-           <strong>LION FIT:</strong> 64/0 (2.5overs)</p>
-        <p><strong>LION FIT won by 10 wickets</strong></div></p>
-      </div>
-    </div>
-
-    <div class="section">
-      <h2>🏆 Player of the Match</h2>
-      <div class="card">
-        <p><strong>Name:</strong> SANJAY</p>
-        <p><strong>Performance:</strong><br>
-           Batting: 54* (14 balls)<br>
-           Bowling: 2/20 (1 overs)</p>
-        <p class="quote">"I'm happy to contribute to the team. The pitch was tricky, but I backed my shots and it paid off."</p>
-      </div>
-    </div>
-
-    <div class="section">
-      <h2>🎤 Captain's Corner</h2>
-      <div class="card">
-        <p><strong>LION FIT - Captain SANJAY:</strong><br>
-        "Proud of the boys. Our bowling was spot on today. Great to seal this win!"</p>
-
-        <p><strong>NEO - Captain ASHOK:</strong><br>
-        "We were happy for lion fit win, and a few batting errors cost us. We'll bounce back stronger next season ."</p>
-      </div>
-    </div>
-
-    <div class="section">
-      <h2>📊 Top Performers</h2>
-      <h3>🏏 Batting Highlights</h3>
-      <table>
-        <thead>
-          <tr><th>Player</th><th>Team</th><th>Runs (Balls)</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>SANJAY</td><td>LION FIT</td><td>54 (14)</td></tr>
-          <tr><td>SAI</td><td>NEO</td><td>11 (04)</td></tr>
-        </tbody>
-      </table>
-
-      <h3>🎯 Bowling Highlights</h3>
-      <table>
-        <thead>
-          <tr><th>Player</th><th>Team</th><th>Figures</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>ABINESH</td><td>lion fit</td><td>3/18 (1.3)</td></tr>
-          <tr><td>ASHOK</td><td>Hero 11</td><td>0/18 (1.5)</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    
-
-    <div class="section">
-      <h2>📅 Next Fixture</h2>
-      <div class="card">
-        <p>Next Match:  SRKvs DCC<br>
-        <strong>Date:</strong> 31 May 2025<br>
-        <strong>Venue:</strong> Marina stadium 🏟️</p>
-      </div>
-    </div>
-  </div>
-  
-  
-    
-  <h2>Matches Points Table</h2>
-  <table>
-    <tr><th>Team</th><th>Played</th><th>Won</th><th>Lost</th><th>Points</th><th>NRR</th><th>Last5</th></tr>
-    <tr><td>Leo<span class="status qualified">Q</span></td><td>08</td><td>8</td><td>0</td><td>16</td><td>+2.17</td><td class="last5">
-            <span class="win">✅</span><span class="win">✅</span><span class="win">✅</span><span class="win">✅</span><span class="win">✅</span>
-          </th></tr>
-    <tr><td>DCC CHARGES<span class="status qualified">Q</span></td><td>08</td><td>6</td><td>1</td><td>13</td><td>+1.67</td><td class="last5">
-            <span class="win">➖</span><span class="win">✅</span><span class="win">✅</span><span class="win">✅</span><span class="win">✅</span>
-          </th></tr>
-      <tr><td>UAE<span class="status qualified">Q</td><td>09</td><td>5</td><td>3</td><td>11</td><td>+1.59</td><td class="last5">
-            <span class="win">➖</span><span class="win">✅</span><span class="win">❌</span><span class="win">✅</span><span class="win">✅</span>
-<tr><td>LION FIT</td><td>08</td><td>5</td><td>3</td><td>10</td><td>+3.16</td><td class="last5">
-            <span class="win">✅</span><span class="win">✅</span><span class="win">✅</span><span class="win">❌</span><span class="win">✅</span>
-          </th></tr>
-          </th></tr>
-    <tr><td>RADIOR</td><td>08</td><td>4</td><td>4</td><td>8</td><td>+1.43</td><td class="last5">
-            <span class="win">✅</span><span class="win">❌</span><span class="win">✅</span><span class="win">✅</span><span class="win">❌</span>
-          </th></tr>
-    <tr><td>TWERK<span class="status Eliminated">E</span></td><td>09</td><td>3</td><td>5</td><td>7</td><td>-1.22</td><td class="last5">
-            <span class="win">➖</span><span class="win">❌</span><span class="win">❌</span><span class="win">❌</span><span class="win">❌</span>
-          </th></tr>
-    <tr><td>HERO 11<span class="status Eliminated">E</td><td>08</td><td>3</td><td>5</td><td>6</td><td>-2.33</td><td class="last5">
-            <span class="win">❌</span><span class="win">✅</span><span class="win">❌</span><span class="win">❌</span><span class="win">❌</span>
-          </th></tr>
-    <tr><td>SUNRISE KINGS<span class="status Eliminated">E</span></td><td>08</td><td>2</td><td>5</td><td>5</td><td>-0.00</td><td class="last5">
-            <span class="win">➖</span><span class="win">❌</span><span class="win">❌</span><span class="win">❌</span><span class="win">❌</span>
-          </th></tr>
-    <tr><td>SFX STAR<span class="status Eliminated">E</span></td><td>09</td><td>2</td><td>7</td><td>4</td><td>-3.43</td><td class="last5">
-            <span class="win">❌</span><span class="win">❌</span><span class="win">❌</span><span class="win">✅</span><span class="win">❌</span>
-          </th></tr>
-<tr><td>NEO<span class="status Eliminated">E</span></td><td>09</td><td>2</td><td>7</td><td>4</td><td>-3.65</td><td class="last5">
-            <span class="win">❌</span><span class="win">❌</span><span class="win">❌</span><span class="win">❌</span><span class="win">✅</span>
-          </th></tr>
-  </table>
-</section>
- <h1>MCC 2025 Statistics</h1>
-
-  <div class="grid">
-    <div class="card red">
-      <h3>Top 4 Teams</h3>
-
-      
-<p>.  LEO,DCC,TBD,TBD</p>
-    </div>
-
-    <div class="card purple">
-      <h3>Purple Cap</h3>
-     
- <p>.  30 Wickets<br>
-Pragadeesh</p>
-    </div>
-
-    <div class="card orange">
-      <h3>Orange Cap</h3>
-      <p>.   820 Runs<br>
-Pragadeesh</p>
-    </div>
-
-    <div class="card blue">
-      <h3>Highest Total</h3>
-      
-<p>.  316/2 •LION FIT vs RADIOR </p>
-    </div>
-
-    <div class="card dark">
-      <h3>Lowest Total</h3>
-     
- <p>.   33/10 – •TWERK vs RADIOR</p>
-    </div>
-
-    <div class="card gold">
-      <h3>Highest Partnership</h3>
-     
- <p>.   217* Runs<br>RADIOR Batsmen cheran & Manikandan </p>
-    </div>
-
-    <div class="card red">
-      <h3>Highest Score</h3>
-      
-<p>.   153* – PRAGADEESH</p>
-    </div>
-
-    <div class="card blue">
-      <h3>Most 4s</h3>
-      
-<p>.   46 – PRAGADEESH</p>
-    </div>
-
-    <div class="card blue">
-      <h3>Most 6s</h3>
-      
-<p>.  82 – SANJAY</p>
-    </div>
-
-    <div class="card pink">
-      <h3>Most 50s</h3>
-      <p>.  7 – JOSHUA</p>
-    </div>
-
-    <div class="card pink">
-      <h3>Most 100s</h3>
-      
-<p>.  7 – PRAGADEESH</p>
-    </div>
-
-    <div class="card red">
-      <h3>Longest Six</h3>
-      
-<p>.  109m – PRAGADEESH & SANJAY</p>
-    </div>
-
-    <div class="card green">
-      <h3>Fastest Ball</h3>
-     
- <p>.  153.2 km/h – ZAHEER</p>
-    </div>
-
-    <div class="card green">
-      <h3>Best Bowling</h3>
-      
-<p>.  9/17 – PRAGADEESH</p>
-    </div>
-
-    <div class="card dark">
-      <h3>Most Dot Balls</h3>
-      
-<p>.  96 – JOSHUA</p>
-    </div>
-
-    <div class="card dark">
-      <h3>Best Economy</h3>
-      
-<p>. 2.0 – MANOJ</p>
-    </div>
-
-    <div class="card red">
-      <h3>Largest Win</h3>
-      
-<p>.   174 runs – •LIIN FIT vs TWERK</p>
-    </div>
-
-    <div class="card dark">
-      <h3>Most Ducks</h3>
-      
-<p>.  5 – Dinesh</p>
-    </div>
-
-    <div class="card dark">
-      <h3>Most Catches</h3>
-      
-<p>.  15 – VIJAY</p>
-    </div>
-
-    <div class="card pink">
-      <h3>Highest Strike Rate</h3>
-      
-<p>.   550.0 – SUDHAKAR</p>
-    </div>
-
-    <div class="card red">
-      <h3>Most Dismissals (WK)</h3>
-      <p>16 – VIJAY<br>(15 Catches, 1 Stumping)</p>
-    </div>
-  </div>
-
-
-
-
-<div class="container">
-    <h1>Most MCC Trophies</h1>
-    <h2>As Captain (Men's)</h2>
-
-    <div class="card yellow">
-      <div class="info">
-        <div class="count">5</div>
-        <div class="details">
-          <h3>RICKY(LION FIT) </h3>
-          <p>(2003 MCC 50 OVRS CT, 2007 MCC 50OVRS CT, 2009 MCC T20 CT, 2010 MCC TEST MACE, 2012 MCC T20CT )</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="card blue">
-      <div class="info">
-        <div class="count">3</div>
-        <div class="details">
-          <h3>MANIKKAM(LEO)</h3>
-          <p>(2007 MCC TEST MACE , 2005 MCC 50OVRS  CT , 2013 MCC T20CT ,)</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="card maroon">
-      <div class="info">
-        <div class="count">3</div>
-        <div class="details">
-          <h3>DARREN SAMMY(SFX)</h3>
-          <p>(2014 MCC T20CT, 2016 MCC T20CT , 2017 MCC TEST MACE )</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="card maroon">
-      <div class="info">
-        <div class="count">2</div>
-        <div class="details">
-          <h3>CLIVE LLOYD(SFX)</h3>
-          <p>(1975 MCC 50OVRS CT , 1979 MCC 50 OVRS CT ,)</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="card yellow">
-      <div class="info">
-        <div class="count">2</div>
-        <div class="details">
-          <h3>SANJAY (LION FIT)</h3>
-          <p>(2023 MCC T20CT , 2024 MCC 50  OVERS CT)</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="card blue">
-      <div class="info">
-        <div class="count">1</div>
-        <div class="details">
-          <h3>PRAGADEESH(LEO)</h3>
-          <p>(2022 MCC TEST MACE )</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-<section class="section">
-  <h2>Most Runs (Top 5 Players)</h2>
-  <table>
-    <tr><th>Player</th><th>Runs</th><th>Matches</th></tr>
-    <tr><td>PRAGADEESH</td><td>820</td><td>8</td></tr>
-    <tr><td>SANJAY</td><td>768</td><td>8</td></tr>
-    <tr><td>RAHUL</td><td>629</td><td>8</td></tr>
-    <tr><td>JOSHUA</td><td>530</td><td>8</td></tr>
-    <tr><td>ALZARI</td><td>486</td><td>9</td></tr>
-  </table>
-</section>
-
-<section class="section">
-  <h2>Most Wickets (Top 5 Players)</h2>
-  <table>
-    <tr><th>Player</th><th>Wickets</th><th>Matches</th></tr>
-    <tr><td>PRAGADEESH</td><td>30</td><td>8</td></tr>
-    <tr><td>SANJAY</td><td>18</td><td>8</td></tr>
-    <tr><td>CHERAN</td><td>15</td><td>8</td></tr>
-    <tr><td>JEFFERY</td><td>13</td><td>9</td></tr>
-    <tr><td>ADITHYA</td><td>11</td><td>9</td></tr>
-  </table>
-</section>
-
-<section class="section">
-  <h2>PERFOMACE</h2>
-  <ul>
-    <li><strong>Best Team:</strong> TBD</li>
-    <li><strong>Worst Team:</strong> TBD</li>
-    <li><strong>Average Team:</strong> TBD</li>
-    <li><strong>Best Captain:</strong> Captain of TBD</li>
-    <li><strong>Win Probability:</strong> LEO (80%)
-        DCC (70%)</li>
-  </ul>
-</section>
-
-<section class="section">
-  <h2>Upcoming Matches Schedule</h2>
-  <table>
-    <tr><th>Match</th><th>Date</th><th>Time</th></tr>
-     <tr><td> SRK  vs  RADIOR </td><td>JUN 01, 2025</td><td>1:30 PM</td></tr>
-   <tr><td> LIIN FIT  vs HERO 11 </td><td>JUN 02, 2025</td><td>10:30 AM</td></tr>
-   <tr><td> LEO VS DC CHARGES</td><td>JUN 03, 2025</td><td>01:30 PM</td></tr>
-  </table>
-</section>
-
-<section class="fans-qa">
-  <h2 class="qa-title">Fans Zone – Q&A</h2>
-
-  <table class="laser-table">
-    <thead>
-      <tr>
-        <th>Fan</th>
-        <th>Question</th>
-        <th>Answer</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Prasanth</td>
-        <td>Who is the best batsman this season?</td>
-        <td>PRAGADEESH with best run scorer & best batsman for this season</td>
-      </tr>
-      <tr>
-        <td>Sandhiya</td>
-        <td>Which team has the strongest bowling lineup?</td>
-        <td>Leo , having the strongest bowling line up</td>
-      </tr>
-      <tr>
-        <td>Aarav</td>
-        <td>Can LION FIT  still qualify for the playoffs?</td>
-        <td>Yes, by winning 1 of the next 2 matches.</td>
-      </tr>
-    </tbody>
-  </table>
-</section>
-
-<div class="container">
-    <div class="title">MCC MENS CRICKET CHAMPIONS CUP T20 2025</div>
-    <div class="subtitle">SEMI & FINAL FIXTURES - CHENNAI 2025</div>
-
-    <div class="match SEMI FINAL 1">
-      <div class="teams">
-        LEO  vs TEAM 3
-    
-      </div>
-      <div class="date">Thursday 05 Jun</div>
-      <div class="venue">Mcc williams-1 stadium</div>
-    </div>
-
-    <div class="match SEMI FINAL 2">
-      <div class="teams">
-        DC CHARGES VS TEAM 4
-      </div>
-      <div class="date">Friday 06 Jun</div>
-      <div class="venue"> MCC Willowmoore Stadium </div>
-    </div>
-
-    <div class="match final">
-      <div class="teams">
-        Final: SF1 Winner vs SF2 Winner
-      </div>
-      <div class="date">Sunday 08 Jun</div>
-      <div class="venue">LEO MCC STADIUM </div>
-    </div>
-  </div>
-
-
-<section class="section">
-  <h2>Predicted Winner</h2>
-  <p>Based on current performance and statistics, <strong>LEO </strong> is predicted to win the tournament.</p>
-   
- 
-
- <div class="commentary">
-      <h2>TEN TEAMS ONE DREAM 2025 </h2>
-      <p>MCC CRICKET T20C CHAMPIONS TROPHY 2025 MATCH NO 39</p>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Win Probability Chart</title>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <style>
-    body {
-      font-family: sans-serif;
-      background;
-      padding: 20px;
-    }
-  </style>
-</head>
-<body>
-
-  <h2 style="text-align:center;">Win Probability</h2>
-  <canvas id="winProbabilityChart" height="300"></canvas>
-
-  <script>
-    const ctx = document.getElementById('winProbabilityChart').getContext('2d');
-
-    const winProbabilityChart = new Chart(ctx, {
-      type: 'line',
-      data: {
-        labels: [
-          "0", "2", "4", "6", "8", "10", "12", "14", "16", "18", "20"
-        ],
-        datasets: [
-          {
-            label: "SRK",
-            data: [50,],
-            fill: true,
-            backgroundColor: "rgba(30, 144, 255, 0.3)",
-            borderColor: "#1e90ff",
-            tension: 0.4,
-            pointRadius: 0
-          },
-          {
-            label: "RAD",
-            data: [50, ],
-            fill: true,
-            backgroundColor: "rgba(220, 20, 60, 0.3)",
-            borderColor: "#dc143c",
-            tension: 0.4,
-            pointRadius: 0
-          }
-        ]
-      },
-      options: {
-        responsive: true,
-        plugins: {
-          tooltip: {
-            mode: 'index',
-            intersect: false,
-          },
-          legend: {
-            display: true,
-            labels: {
-              usePointStyle: true
-            }
-          }
-        },
-        interaction: {
-          mode: 'index',
-          intersect: false,
-        },
-        scales: {
-          y: {
-            beginAtZero: true,
-            max: 100,
-            title: {
-              display: true,
-              text: 'Win Probability (%)'
-            }
-          },
-          x: {
-            title: {
-              display: true,
-              text: 'Overs'
-            }
-          }
-        }
-      }
-    });
-  </script>
-
- 
-    </div>
-  </div>
-</section>
-
-  </main>
-<script>
-  // Auto refresh every 20 seconds (20000 milliseconds)
-  setTimeout(() => {
-    location.reload();
-  }, 20000); 
-</script>
-</body>
-</html>
+            <div style="

@@ -1702,4 +1702,61 @@ Pragadeesh</p>
             label: "RAD",
             data: [50, ],
             fill: true,
-            backgr
+            borderColor: "#dc143c",
+            tension: 0.4,
+            pointRadius: 0
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          tooltip: {
+            mode: 'index',
+            intersect: false,
+          },
+          legend: {
+            display: true,
+            labels: {
+              usePointStyle: true
+            }
+          }
+        },
+        interaction: {
+          mode: 'index',
+          intersect: false,
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            max: 100,
+            title: {
+              display: true,
+              text: 'Win Probability (%)'
+            }
+          },
+          x: {
+            title: {
+              display: true,
+              text: 'Overs'
+            }
+          }
+        }
+      }
+    });
+  </script>
+
+
+    </div>
+  </div>
+</section>
+
+  </main>
+<script>
+  // Auto refresh every 20 seconds (20000 milliseconds)
+  setTimeout(() => {
+    location.reload();
+  }, 20000); 
+</script>
+</body>
+</html>

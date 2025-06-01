@@ -1189,30 +1189,36 @@ style="font-size: 11px;">2-25 (2.3)</div>
           <span class="overs-box" id="oversBox">--</span>
         </div>
         <div class="toss-info">RADIOR won the toss & elected to FIELD</div>
-      </div>
- <div class="to-win">
+  <div class="to-win">
     <span>TO WIN</span>
     <span id="runsToWin">0</span>
     <span>RUNS</span>
     <span id="ballsLeft">0</span>
     <span>BALLS</span>
   </div>
+</div>
 
 <script>
-  // Variables
-  const targetScore = 145; // Example target score to chase (adjust as needed)
-  const currentScore = 145; // Example current score (adjust as needed)
-  const currentOvers = 19.4; // Example current overs (adjust as needed)
+  // Example data
+  const targetScore = 145;
+  const currentScore = 145;
+  const currentOvers = "18.3"; // Over in cricket format (e.g., 14.2 overs)
 
-  // Calculations
-  const runsToWin = targetScore - currentScore;
-  const ballsPlayed = currentOvers * 6;
+  // Parse overs to calculate balls played
+  const oversParts = currentOvers.split(".");
+  const fullOvers = parseInt(oversParts[0], 10);
+  const extraBalls = oversParts[1] ? parseInt(oversParts[1], 10) : 0;
+
+  const ballsPlayed = (fullOvers * 6) + extraBalls;
   const ballsLeft = 120 - ballsPlayed;
+  const runsToWin = targetScore - currentScore;
 
-  // Display
+  // Update display
   document.getElementById('runsToWin').textContent = runsToWin;
   document.getElementById('ballsLeft').textContent = ballsLeft;
 </script>
+
+      </div>
 </div>
    <div class="highlight">
       <div class="wicket">FOUR..!FOUR!</div></div></div>

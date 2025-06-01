@@ -1280,7 +1280,7 @@ style="font-size: 11px;">2-25 (2.3)</div>
     const target = 145;
     const totalOvers = 20;
 
-    const striker = 'CHERAN';
+    const striker = '*CHERAN';
     const nonStriker = 'SURYA';
     const strikerRuns = 60;
     const strikerBalls = 54;
@@ -1315,7 +1315,7 @@ style="font-size: 11px;">2-25 (2.3)</div>
     document.getElementById('rrr').textContent = calculateRRR(target, runs, overs, totalOvers);
     document.getElementById('proj').textContent = calculateProjected(runs, overs, totalOvers);
     document.getElementById('batters').innerHTML = `
-      ${striker}* ${strikerRuns} (${strikerBalls})<br>
+      ${striker} ${strikerRuns} (${strikerBalls})<br>
       ${nonStriker} ${nonStrikerRuns} (${nonStrikerBalls})
     `;
   </script>

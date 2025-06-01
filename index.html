@@ -1190,6 +1190,31 @@ style="font-size: 11px;">2-25 (2.3)</div>
         </div>
         <div class="toss-info">RADIOR won the toss & elected to FIELD</div>
       </div>
+ <div class="to-win">
+    <span>TO WIN</span>
+    <span id="runsToWin">0</span>
+    <span>RUNS</span>
+    <span id="ballsLeft">0</span>
+    <span>BALLS</span>
+  </div>
+</div>
+
+<script>
+  // Variables
+  const targetScore = 145; // Example target score to chase (adjust as needed)
+  const currentScore = 145; // Example current score (adjust as needed)
+  const currentOvers = 18.3; // Example current overs (adjust as needed)
+
+  // Calculations
+  const runsToWin = targetScore - currentScore;
+  const ballsPlayed = currentOvers * 6;
+  const ballsLeft = 120 - ballsPlayed;
+
+  // Display
+  document.getElementById('runsToWin').textContent = runsToWin;
+  document.getElementById('ballsLeft').textContent = ballsLeft;
+</script>
+
    <div class="highlight">
       <div class="wicket">FOUR..!FOUR!</div></div></div>
     </div>

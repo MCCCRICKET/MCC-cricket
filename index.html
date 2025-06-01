@@ -1203,7 +1203,34 @@ style="font-size: 11px;">2-25 (2.3)</div>
 
     <div class="footer">MCC T20CT • Match 43 of 48</div>
   </div>
+<div class="commentary-section">
+    <div class="entry">
+       <div class="six-distance-card">
+    <h3>Six Distance</h3>
+    <p id="sixDistance">0m Long Six!</p>
+  </div>
+</div>
+</div>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const targetDistance = 98; // Final distance (change as needed!)
+    const display = document.getElementById("sixDistance");
+    let current = 0;
+    const duration = 1500; // Total animation time in ms
+    const stepTime = 20; // Time between updates in ms
+    const increment = targetDistance / (duration / stepTime);
+
+    const timer = setInterval(() => {
+      current += increment;
+      if (current >= targetDistance) {
+        current = targetDistance;
+        clearInterval(timer);
+      }
+      display.textContent = Math.floor(current) + "m";
+    }, stepTime);
+  });
+</script>
   <script>
     // Editable match data
     const runs = 146;

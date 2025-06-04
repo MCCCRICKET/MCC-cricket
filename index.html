@@ -266,6 +266,63 @@
       border-bottom: 1px solid #ccc;
       padding-bottom: 5px;
     }   
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Match Countdown</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      text-align: center;
+      margin-top: 50px;
+      color: #000;
+      background: transparent;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+
+    .countdown {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .time-box {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      border: 2px solid #000;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 18px;
+      position: relative;
+    }
+
+    .time-box span.label {
+      font-size: 10px;
+      text-transform: uppercase;
+      position: absolute;
+      bottom: 6px;
+    }
+
+    .match-date {
+      margin-top: 30px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+
+
     <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1214,6 +1271,61 @@ match-header {
   </header>
   <main>
  
+<h1>Match begins in</h1>
+  <div class="countdown">
+    <div class="time-box">
+      <div id="days">00</div>
+      <span class="label">Days</span>
+    </div>
+    <div class="time-box">
+      <div id="hours">00</div>
+      <span class="label">Hours</span>
+    </div>
+    <div class="time-box">
+      <div id="minutes">00</div>
+      <span class="label">Minutes</span>
+    </div>
+    <div class="time-box">
+      <div id="seconds">00</div>
+      <span class="label">Seconds</span>
+    </div>
+  </div>
+
+  <div class="match-date">
+    Match Date: <strong>05 Jun 2025 12:30</strong>
+  </div>
+
+  <script>
+    const matchDate = new Date("June 5, 2025 12:20:00").getTime();
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = matchDate - now;
+
+      if (distance < 0) {
+        document.querySelector('.countdown').innerHTML = "<div>Match Started</div>";
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("days").innerText = String(days).padStart(2, '0');
+      document.getElementById("hours").innerText = String(hours).padStart(2, '0');
+      document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
+      document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+  </script>
+
+
+
+
+
 
     <div class="live-box">
       <div class="live-status">

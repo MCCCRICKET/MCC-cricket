@@ -1258,7 +1258,7 @@ match-header {
           <div class="bowler-details" style="text-align: right; margin-right: 6px;">
             <div class="bowler-name">Zaheer</div>
                        <div
-style="font-size: 11px;"> 5-24(2.1)</div>
+style="font-size: 11px;"> 6-28(2.2)</div>
           </div>
 
         </div>
@@ -1284,7 +1284,7 @@ style="font-size: 11px;"> 5-24(2.1)</div>
   // Example data
   const targetScore = 120;
   const currentScore = 73;
-  const currentOvers = "4.1"; // Over in cricket format (e.g., 14.2 overs)
+  const currentOvers = "4.2"; // Over in cricket format (e.g., 14.2 overs)
 
   // Parse overs to calculate balls played
   const oversParts = currentOvers.split(".");
@@ -1317,7 +1317,7 @@ style="font-size: 11px;"> 5-24(2.1)</div>
 
       <div class="balls">
         <div class="ball dot">4</div>
-        <div class="ball dot"></div>
+        <div class="ball dot">w</div>
         <div class="ball dot"></div>
         <div class="ball dot"></div>
         <div class="ball dot"></div>
@@ -1331,17 +1331,17 @@ style="font-size: 11px;"> 5-24(2.1)</div>
   <script>
     // Editable match data
     const runs = 73;
-    const wickets = 07;
-    const overs = 4.1; // Change this to simulate different overs
+    const wickets = 08;
+    const overs = 4.2; // Change this to simulate different overs
     const target =120 ;
     const totalOvers = 20;
 
     const striker = 'Pratheesh';
-    const nonStriker = 'Pavan*';
+    const nonStriker = 'Ramesh*';
     const strikerRuns = 06;
     const strikerBalls = 01;
-    const nonStrikerRuns = 27;
-    const nonStrikerBalls = 06;
+    const nonStrikerRuns = 00;
+    const nonStrikerBalls = 00;
 
     function getTotalBalls(overs) {
       return Math.floor(overs) * 6 + Math.round((overs % 1) * 10);

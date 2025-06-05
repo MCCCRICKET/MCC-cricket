@@ -1258,7 +1258,7 @@ match-header {
           <div class="bowler-details" style="text-align: right; margin-right: 6px;">
             <div class="bowler-name">Zaheer</div>
                        <div
-style="font-size: 11px;"> 1 -1(0.2)</div>
+style="font-size: 11px;"> 2-1(0.3)</div>
           </div>
 
         </div>
@@ -1284,7 +1284,7 @@ style="font-size: 11px;"> 1 -1(0.2)</div>
   // Example data
   const targetScore = 120;
   const currentScore = 01;
-  const currentOvers = "0.2"; // Over in cricket format (e.g., 14.2 overs)
+  const currentOvers = "0.3"; // Over in cricket format (e.g., 14.2 overs)
 
   // Parse overs to calculate balls played
   const oversParts = currentOvers.split(".");
@@ -1318,7 +1318,7 @@ style="font-size: 11px;"> 1 -1(0.2)</div>
       <div class="balls">
         <div class="ball dot">1</div>
         <div class="ball dot">W</div>
-        <div class="ball dot"></div>
+        <div class="ball dot">W</div>
         <div class="ball dot"></div>
         <div class="ball dot"></div>
         <div class="ball dot"></div>
@@ -1331,13 +1331,13 @@ style="font-size: 11px;"> 1 -1(0.2)</div>
   <script>
     // Editable match data
     const runs = 01;
-    const wickets = 01;
-    const overs = 0.2; // Change this to simulate different overs
+    const wickets = 02;
+    const overs = 0.3; // Change this to simulate different overs
     const target =120 ;
     const totalOvers = 20;
 
     const striker = 'Jeffery';
-    const nonStriker = 'Klase*';
+    const nonStriker = '*';
     const strikerRuns = 01;
     const strikerBalls = 01;
     const nonStrikerRuns = 00;

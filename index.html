@@ -1258,7 +1258,7 @@ match-header {
           <div class="bowler-details" style="text-align: right; margin-right: 6px;">
             <div class="bowler-name">Richard</div>
                        <div
-style="font-size: 11px;"> 0-8 (0.2)</div>
+style="font-size: 11px;"> 0-12 (0.4)</div>
           </div>
 
         </div>
@@ -1318,8 +1318,8 @@ style="font-size: 11px;"> 0-8 (0.2)</div>
       <div class="balls">
         <div class="ball dot">1</div>
         <div class="ball dot">1</div>
-        <div class="ball dot"></div>
-        <div class="ball dot"></div>
+        <div class="ball dot">•</div>
+        <div class="ball dot">4</div>
         <div class="ball dot"></div>
         <div class="ball dot"></div>
       </div>
@@ -1330,9 +1330,9 @@ style="font-size: 11px;"> 0-8 (0.2)</div>
      
   <script>
     // Editable match data
-    const runs = 83;
+    const runs = 87;
     const wickets = 03;
-    const overs = 10.2; // Change this to simulate different overs
+    const overs = 10.4; // Change this to simulate different overs
     const target =0 ;
     const totalOvers = 20;
 
@@ -1340,8 +1340,8 @@ style="font-size: 11px;"> 0-8 (0.2)</div>
     const nonStriker = 'Vijay*';
     const strikerRuns = 06;
     const strikerBalls = 05;
-    const nonStrikerRuns = 37;
-    const nonStrikerBalls = 25;
+    const nonStrikerRuns = 39;
+    const nonStrikerBalls = 26;
 
     function getTotalBalls(overs) {
       return Math.floor(overs) * 6 + Math.round((overs % 1) * 10);

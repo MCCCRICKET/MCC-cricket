@@ -1258,7 +1258,7 @@ match-header {
           <div class="bowler-details" style="text-align: right; margin-right: 6px;">
             <div class="bowler-name">Zaheer</div>
                        <div
-style="font-size: 11px;"> 7-45(6.2)</div>
+style="font-size: 11px;"> 8-45(6.3)</div>
           </div>
 
         </div>
@@ -1284,7 +1284,7 @@ style="font-size: 11px;"> 7-45(6.2)</div>
   // Example data
   const targetScore = 120;
   const currentScore = 113;
-  const currentOvers = "6.2"; // Over in cricket format (e.g., 14.2 overs)
+  const currentOvers = "6.3"; // Over in cricket format (e.g., 14.2 overs)
 
   // Parse overs to calculate balls played
   const oversParts = currentOvers.split(".");
@@ -1303,7 +1303,7 @@ style="font-size: 11px;"> 7-45(6.2)</div>
       </div>
 
    <div class="highlight">
-      <div class="wicket">Wicket</div></div></div>
+      <div class="wicket">Wicket! it's done</div></div></div>
     </div>
 </div>
  
@@ -1318,7 +1318,7 @@ style="font-size: 11px;"> 7-45(6.2)</div>
       <div class="balls">
         <div class="ball dot">W</div>
         <div class="ball dot">0</div>
-        <div class="ball dot"></div>
+        <div class="ball dot">W</div>
         <div class="ball dot"></div>
         <div class="ball dot"></div>
         <div class="ball dot"></div>
@@ -1331,17 +1331,17 @@ style="font-size: 11px;"> 7-45(6.2)</div>
   <script>
     // Editable match data
     const runs = 113;
-    const wickets = 09;
-    const overs = 6.2; // Change this to simulate different overs
+    const wickets = 10;
+    const overs = 6.3; // Change this to simulate different overs
     const target =120 ;
     const totalOvers = 20;
 
     const striker = 'Pratheesh';
-    const nonStriker = 'Richard*';
+    const nonStriker = '-';
     const strikerRuns = 44;
     const strikerBalls = 09;
     const nonStrikerRuns = 00;
-    const nonStrikerBalls = 01;
+    const nonStrikerBalls = 00;
 
     function getTotalBalls(overs) {
       return Math.floor(overs) * 6 + Math.round((overs % 1) * 10);
@@ -1417,9 +1417,13 @@ Zaheer is on fire with 7 wickets already!
 .<span class="highlight-four"> </span></div>
     </div>
 
-    <div class="ball-line" data-runs="0">
+    <div class="ball-line" data-runs="W">
       <div class="ball-number">6.3</div>
-      <div class="ball-text"><span class="highlight-four"></span></div>
+      <div class="ball-text">CLEAN BOWLED!
+IT’S ALL OVER!!!LEO WINS – Zaheer takes 8 wickets, a once-in-a-generation spell!<span class="highlight-four">Leo wins by 7 runs and storms into the finals!
+📢HISTORIC MOMENT –Leo qualifies for the MCC T20C Finals after 7 long years!
+💪 They defend the lowest total ever in tournament history!Fireworks erupt! Zaheer is lifted by teammates.Commentators can't stop raving – “This is one for the ages!”
+Fans in the stands are in tears – Leo has done the impossible! Congratulations Team Leo🥹</span></div>
     </div>
 
     <div class="ball-line" data-runs="0">

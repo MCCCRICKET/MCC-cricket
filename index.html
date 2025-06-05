@@ -1789,6 +1789,154 @@ Pragadeesh</p>
     </div>
   </div>
 
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Macha Vedikkanum</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background:
+      overflow: hidden;
+    }
+
+    canvas {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+    }
+
+    .tagline {
+      position: absolute;
+      bottom: 20px;
+      width: 100%;
+      text-align: center;
+      color: 
+      font-size: 28px;
+      font-weight: bold;
+      text-shadow: 2px 2px 10px #000;
+      z-index: 2;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="fireworks"></canvas>
+  <div class="tagline">🔥 Macha! Pattasu mela poi vedikkanum da! 🔥</div>
+
+  <script>
+    const canvas = document.getElementById("fireworks");
+    const ctx = canvas.getContext("2d");
+
+    let w, h;
+    function resize() {
+      w = canvas.width = window.innerWidth;
+      h = canvas.height = window.innerHeight;
+    }
+    resize();
+    window.addEventListener("resize", resize);
+
+    class Firework {
+      constructor() {
+        this.x = Math.random() * w;
+        this.y = h;
+        this.tx = Math.random() * w;
+        this.ty = Math.random() * h / 2;
+        this.exploded = false;
+        this.particles = [];
+        this.color = `hsl(${Math.random() * 360}, 100%, 50%)`;
+      }
+
+      update() {
+        if (!this.exploded) {
+          let dx = this.tx - this.x;
+          let dy = this.ty - this.y;
+          this.x += dx * 0.05;
+          this.y += dy * 0.05;
+
+          if (Math.abs(dx) < 5 && Math.abs(dy) < 5) {
+            this.exploded = true;
+            for (let i = 0; i < 60; i++) {
+              this.particles.push(new Particle(this.tx, this.ty, this.color));
+            }
+          }
+        } else {
+          this.particles.forEach(p => p.update());
+          this.particles = this.particles.filter(p => p.alpha > 0);
+        }
+      }
+
+      draw() {
+        if (!this.exploded) {
+          ctx.beginPath();
+          ctx.arc(this.x, this.y, 2, 0, Math.PI * 2);
+          ctx.fillStyle = this.color;
+          ctx.fill();
+        } else {
+          this.particles.forEach(p => p.draw());
+        }
+      }
+
+      done() {
+        return this.exploded && this.particles.length === 0;
+      }
+    }
+
+    class Particle {
+      constructor(x, y, color) {
+        this.x = x;
+        this.y = y;
+        this.vx = (Math.random() - 0.5) * 10;
+        this.vy = (Math.random() - 0.5) * 10;
+        this.alpha = 1;
+        this.color = color;
+      }
+
+      update() {
+        this.x += this.vx;
+        this.y += this.vy;
+        this.vy += 0.1;
+        this.alpha -= 0.015;
+      }
+
+      draw() {
+        ctx.globalAlpha = this.alpha;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, 3, 0, Math.PI * 2);
+        ctx.fillStyle = this.color;
+        ctx.fill();
+        ctx.globalAlpha = 1;
+      }
+    }
+
+    let fireworks = [];
+
+    function animate() {
+      ctx.clearRect(0, 0, w, h); // Transparent background
+      if (Math.random() < 0.04) {
+        fireworks.push(new Firework());
+      }
+
+      fireworks.forEach(f => {
+        f.update();
+        f.draw();
+      });
+
+      fireworks = fireworks.filter(f => !f.done());
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+  </script>
+</body>
+</html>
+
+
+
+
 
 
 

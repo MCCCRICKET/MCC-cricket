@@ -1213,9 +1213,9 @@ style="font-size: 11px;"> 0-0(0.0)</div>
         <div class="toss-info">TWO TEAM ONE DREAM </div>
   <div class="to-win">
     <span></span>
-    <span id="runsToWin">0</span>
+    <span id="runsToWin"></span>
     <span></span>
-    <span id="ballsLeft">0</span>
+    <span id="ballsLeft"></span>
     <span></span>
   </div>
 </div>
@@ -1232,7 +1232,7 @@ style="font-size: 11px;"> 0-0(0.0)</div>
   const extraBalls = oversParts[1] ? parseInt(oversParts[1], 10) : 0;
 
   const ballsPlayed = (fullOvers * 6) + extraBalls;
-  const ballsLeft = 120 - ballsPlayed;
+  const ballsLeft =  120 - ballsPlayed;
   const runsToWin = targetScore - currentScore;
 
   // Update display

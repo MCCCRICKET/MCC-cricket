@@ -1188,7 +1188,7 @@ match-header {
           <div class="bowler-details" style="text-align: right; margin-right: 6px;">
             <div class="bowler-name">Daniel</div>
                        <div
-style="font-size: 11px;"> 1-43(3.4)</div>
+style="font-size: 11px;"> 2-43(3.5)</div>
           </div>
         </div>
       </div>
@@ -1213,7 +1213,7 @@ style="font-size: 11px;"> 1-43(3.4)</div>
   // Example data
   const targetScore = 160;
   const currentScore = 158;
-  const currentOvers = "19.4"; // Over in cricket format (e.g., 14.2 overs)
+  const currentOvers = "19.5"; // Over in cricket format (e.g., 14.2 overs)
 
   // Parse overs to calculate balls played
   const oversParts = currentOvers.split(".");
@@ -1232,7 +1232,7 @@ style="font-size: 11px;"> 1-43(3.4)</div>
       </div>
 
    <div class="highlight">
-      <div class="wicket"></div></div></div>
+      <div class="wicket">Wicket</div></div></div>
     </div>
 </div>
    <div class="rate-box">
@@ -1248,7 +1248,7 @@ style="font-size: 11px;"> 1-43(3.4)</div>
         <div class="ball dot">N6</div>
         <div class="ball dot">Wd</div>
         <div class="ball dot">3b</div>
-        <div class="ball dot"></div>
+        <div class="ball dot">W</div>
         <div class="ball dot"></div>
         
         
@@ -1263,17 +1263,17 @@ style="font-size: 11px;"> 1-43(3.4)</div>
   <script>
     // Editable match data
     const runs = 158;
-    const wickets = 05;
-    const overs = 19.4; // Change this to simulate different overs
+    const wickets = 06;
+    const overs = 19.5; // Change this to simulate different overs
     const target =160 ;
     const totalOvers = 20;
 
     const striker = 'Pragadeesh ';
-    const nonStriker = ' Manish * ';
+    const nonStriker = ' ';
     const strikerRuns = 82;
     const strikerBalls = 52;
-    const nonStrikerRuns = 01;
-    const nonStrikerBalls = 01;
+    const nonStrikerRuns = 00;
+    const nonStrikerBalls = 00;
 
     function getTotalBalls(overs) {
       return Math.floor(overs) * 6 + Math.round((overs % 1) * 10);
@@ -1318,6 +1318,11 @@ style="font-size: 11px;"> 1-43(3.4)</div>
 
    <div class="section">
     <h2>Live Commentary</h2>
+
+<p><strong>Over 19.5:</strong> out </p>
+    <p><strong>Harsha:</strong> <span class="quote">"Manish he out. that's good from the keeper sam to stumping out  "</span></p>
+    <p><strong>Michael :</strong> "oh no now they just needed 1 off 2 new batsman comming in What a twist in this final match "</p>
+
 <p><strong>Over 19.4:</strong> 3Bys </p>
     <p><strong>Harsha:</strong> <span class="quote">"it hitting on stump but they run 3 "</span></p>
     <p><strong>Michael :</strong> "yes but keeping free hit and he knows that's the run is countable ! could we see super over in this final leo need 2 off 2 Manish is on the strike"</p>

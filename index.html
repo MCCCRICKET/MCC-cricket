@@ -1188,7 +1188,7 @@ match-header {
           <div class="bowler-details" style="text-align: right; margin-right: 6px;">
             <div class="bowler-name">Richard</div>
                        <div
-style="font-size: 11px;"> 2-22(3.3)</div>
+style="font-size: 11px;"> 2-22(3.4)</div>
           </div>
         </div>
       </div>
@@ -1212,8 +1212,8 @@ style="font-size: 11px;"> 2-22(3.3)</div>
 <script>
   // Example data
   const targetScore = 160;
-  const currentScore = 131;
-  const currentOvers = "18.3"; // Over in cricket format (e.g., 14.2 overs)
+  const currentScore = 132;
+  const currentOvers = "18.4"; // Over in cricket format (e.g., 14.2 overs)
 
   // Parse overs to calculate balls played
   const oversParts = currentOvers.split(".");
@@ -1245,7 +1245,7 @@ style="font-size: 11px;"> 2-22(3.3)</div>
         <div class="ball dot">1</div>
         <div class="ball dot">1</div>
         <div class="ball dot">0</div>
-        <div class="ball dot"></div>
+        <div class="ball dot">1</div>
         <div class="ball dot"></div>
         <div class="ball dot"></div>
         
@@ -1260,18 +1260,18 @@ style="font-size: 11px;"> 2-22(3.3)</div>
      
   <script>
     // Editable match data
-    const runs = 131;
+    const runs = 132;
     const wickets = 04;
-    const overs = 18.3; // Change this to simulate different overs
+    const overs = 18.4; // Change this to simulate different overs
     const target =160 ;
     const totalOvers = 20;
 
-    const striker = 'Pragadeesh ';
-    const nonStriker = 'Vijay *';
+    const striker = 'Pragadeesh* ';
+    const nonStriker = 'Vijay ';
     const strikerRuns = 62;
     const strikerBalls = 48;
-    const nonStrikerRuns = 39;
-    const nonStrikerBalls = 34;
+    const nonStrikerRuns = 40;
+    const nonStrikerBalls = 35;
 
     function getTotalBalls(overs) {
       return Math.floor(overs) * 6 + Math.round((overs % 1) * 10);
@@ -1317,6 +1317,8 @@ style="font-size: 11px;"> 2-22(3.3)</div>
    <div class="section">
     <h2>Live Commentary</h2>
 
+
+<p><strong> Over 18.4:</strong> yes thats a good length Richard and vijay giving strikes to pragdeesh </p>
 
 <p><strong> Over 18.3:</strong>oh he misses misses vijay been calmed a little bit to take charge on next ball</p>
 

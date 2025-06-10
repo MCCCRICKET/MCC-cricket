@@ -1188,7 +1188,7 @@ match-header {
           <div class="bowler-details" style="text-align: right; margin-right: 6px;">
             <div class="bowler-name">Daniel</div>
                        <div
-style="font-size: 11px;"> 1-29(3.1)</div>
+style="font-size: 11px;"> 1-30(3.2)</div>
           </div>
         </div>
       </div>
@@ -1212,8 +1212,8 @@ style="font-size: 11px;"> 1-29(3.1)</div>
 <script>
   // Example data
   const targetScore = 160;
-  const currentScore = 144;
-  const currentOvers = "19.1"; // Over in cricket format (e.g., 14.2 overs)
+  const currentScore = 145;
+  const currentOvers = "19.2"; // Over in cricket format (e.g., 14.2 overs)
 
   // Parse overs to calculate balls played
   const oversParts = currentOvers.split(".");
@@ -1232,7 +1232,7 @@ style="font-size: 11px;"> 1-29(3.1)</div>
       </div>
 
    <div class="highlight">
-      <div class="wicket">Wicket</div></div></div>
+      <div class="wicket"></div></div></div>
     </div>
 </div>
    <div class="rate-box">
@@ -1243,7 +1243,7 @@ style="font-size: 11px;"> 1-29(3.1)</div>
 
       <div class="balls">
         <div class="ball dot">W</div>
-        <div class="ball dot"></div>
+        <div class="ball dot">1</div>
         <div class="ball dot"></div>
         <div class="ball dot"></div>
         <div class="ball dot"></div>
@@ -1260,18 +1260,18 @@ style="font-size: 11px;"> 1-29(3.1)</div>
      
   <script>
     // Editable match data
-    const runs = 144;
+    const runs = 145;
     const wickets = 05;
-    const overs = 19.1; // Change this to simulate different overs
+    const overs = 19.2; // Change this to simulate different overs
     const target =160 ;
     const totalOvers = 20;
 
-    const striker = 'Pragadeesh ';
-    const nonStriker = ' ';
+    const striker = 'Pragadeesh *';
+    const nonStriker = ' Manish ';
     const strikerRuns = 74;
     const strikerBalls = 50;
-    const nonStrikerRuns = 00;
-    const nonStrikerBalls = 00;
+    const nonStrikerRuns = 01;
+    const nonStrikerBalls = 01;
 
     function getTotalBalls(overs) {
       return Math.floor(overs) * 6 + Math.round((overs % 1) * 10);
@@ -1317,7 +1317,13 @@ style="font-size: 11px;"> 1-29(3.1)</div>
    <div class="section">
     <h2>Live Commentary</h2>
 
-  <p><strong>Over 19.:</strong> Vijay gone it's a wicket </p>
+<p><strong>Over 19.2:</strong> it's single </p>
+    <p><strong>Harsha:</strong><span class="quote">"mid early on yes that's an single are you see they giving strike to young man"</span></p>
+    <p><strong>Michael :</strong> "yes at the present the captain the leader he leads team so just 2 hit away lets wait buddy "</p>
+
+
+
+  <p><strong>Over 19.1:</strong> Vijay gone it's a wicket </p>
     <p><strong>Harsha:</strong>it's miss hit the catch is taken <span class="quote">""</span></p>
     <p><strong>Michael :</strong> "the new man in the standard no matter pragadeesh runs but Manish is now comming inside.leo needs 5off16 "</p>
 

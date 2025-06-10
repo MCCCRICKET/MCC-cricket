@@ -1186,9 +1186,9 @@ match-header {
 
         <div style="display: flex; align-items: center;">
           <div class="bowler-details" style="text-align: right; margin-right: 6px;">
-            <div class="bowler-name">Richard</div>
+            <div class="bowler-name">Shiva</div>
                        <div
-style="font-size: 11px;"> 1-17(3)</div>
+style="font-size: 11px;"> 2-19(2.1)</div>
           </div>
 
         </div>
@@ -1213,8 +1213,8 @@ style="font-size: 11px;"> 1-17(3)</div>
 <script>
   // Example data
   const targetScore = 160;
-  const currentScore = 0;
-  const currentOvers = "0"; // Over in cricket format (e.g., 14.2 overs)
+  const currentScore = 100;
+  const currentOvers = "15.1"; // Over in cricket format (e.g., 14.2 overs)
 
   // Parse overs to calculate balls played
   const oversParts = currentOvers.split(".");
@@ -1243,12 +1243,12 @@ style="font-size: 11px;"> 1-17(3)</div>
       </div>
 
       <div class="balls">
-        <div class="ball dot">2</div>
-        <div class="ball dot">1</div>
-        <div class="ball dot">1</div>
-        <div class="ball dot">4</div>
-        <div class="ball dot">1</div>
-        <div class="ball dot">1</div>
+        <div class="ball dot">0</div>
+        <div class="ball dot"></div>
+        <div class="ball dot"></div>
+        <div class="ball dot"></div>
+        <div class="ball dot"></div>
+        <div class="ball dot"></div>
         
         
         
@@ -1262,7 +1262,7 @@ style="font-size: 11px;"> 1-17(3)</div>
     // Editable match data
     const runs = 100;
     const wickets = 04;
-    const overs = 15; // Change this to simulate different overs
+    const overs = 15.1; // Change this to simulate different overs
     const target =160 ;
     const totalOvers = 20;
 
@@ -1271,7 +1271,7 @@ style="font-size: 11px;"> 1-17(3)</div>
     const strikerRuns = 42;
     const strikerBalls = 37;
     const nonStrikerRuns = 32;
-    const nonStrikerBalls = 25;
+    const nonStrikerBalls = 26;
 
     function getTotalBalls(overs) {
       return Math.floor(overs) * 6 + Math.round((overs % 1) * 10);
